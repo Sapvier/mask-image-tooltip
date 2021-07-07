@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    margin: 0;
+    font-size: calc(.5vw + 10px)
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+    padding: 30px;
+    margin: 0 auto;
+    width: min(100vw, 100%);
+}
+
+:root {
+    --radius: 15px;
+}
+
+.text-message {
+    margin-left: auto;
+    background: #549EF5;
+    color: white;
+    padding: 15px;
+    max-width: 20%;
+
+    mask-image:
+            radial-gradient(#fff 14.5px, #fff0 15px),
+            radial-gradient(#fff 14.5px, #fff0 15px),
+            linear-gradient(#fff, #fff),
+            linear-gradient(#fff, #fff),
+            url('data:image/svg+xml;utf8,<svg width="39" height="24" viewBox="0 0 39 24" xmlns="http://www.w3.org/2000/svg"><path d="M0.000217438 24C10.8002 21.6 15.5002 7 16.5002 0C26.6669 1.33333 44.8002 5.8 36.0002 13C25.0002 22 16.5002 24 0.000217438 24Z" /></svg>');
+    mask-position:
+            0 0,
+            0 100%,
+            0 15px,
+            15px 0,
+            0 100%;
+    mask-size:
+            30px 30px,
+            30px 30px,
+            100% calc(100% - calc(var(--radius) * 2)),
+            100% 100%,
+            29px 18px;
+    mask-repeat: no-repeat;
+
+}
+
+
